@@ -1,3 +1,10 @@
+:root {
+  --purple-900: #1a1b4b;
+  --purple-800: #292a73;
+  --purple-700: #3e4491;
+  --blue: #3a9efd;
+}
+
 *,
 *::before,
 *::after {
@@ -10,33 +17,24 @@ body {
 }
 
 body {
+  min-height: 100vh;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  background: #37b2c3;
+  background: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-img,
-picture,
-video,
-canvas,
 svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
+  width: 100%;
+  height: auto;
 }
 
 .piano {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: min(90%, 1000px);
+  padding: 2rem;
+  background: repeating-linear-gradient(45deg, var(--purple-900) 5%, var(--purple-700) 15%, var(--purple-800) 30%);
+  border-radius: 5px;
 }
 
 .white-keys {
@@ -47,10 +45,20 @@ select {
   fill: #ffd200;
 }
 
+.white-keys,
+.black-keys {
+  transition: 300ms ease;
+}
+
 .black-keys {
   fill: black;
 }
 
 .black-keys:hover {
   fill: #f40082;
+}
+
+.white-keys:active,
+.black-keys:active {
+  transform: translateY(1rem);
 }
