@@ -12,6 +12,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: #37b2c3;
 }
 
 img,
@@ -28,4 +29,28 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+.piano {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-keys {
+  fill: white;
+}
+
+.white-keys:hover {
+  fill: #ffd200;
+}
+
+.black-keys {
+  fill: black;
+}
+
+.black-keys:hover {
+  fill: #f40082;
 }
